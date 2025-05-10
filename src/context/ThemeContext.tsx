@@ -9,7 +9,7 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType>({
   isDarkMode: true,
-  toggleTheme: () => {},
+  toggleTheme: () => { },
 });
 
 export const useTheme = () => useContext(ThemeContext);
@@ -123,11 +123,11 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
             fontWeight: 600,
             borderRadius: 8,
             padding: '8px 16px',
-            boxShadow: isDarkMode 
+            boxShadow: isDarkMode
               ? '0 2px 4px rgba(0,0,0,0.2)'
               : '0 2px 4px rgba(0,0,0,0.1)',
             '&:hover': {
-              boxShadow: isDarkMode 
+              boxShadow: isDarkMode
                 ? '0 4px 8px rgba(0,0,0,0.3)'
                 : '0 4px 8px rgba(0,0,0,0.15)',
             },

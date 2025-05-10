@@ -35,7 +35,7 @@ interface LayoutProps {
 }
 
 const GlassAppBar = styled(AppBar)(({ theme }) => ({
-  background: theme.palette.mode === 'dark' 
+  background: theme.palette.mode === 'dark'
     ? 'rgba(18, 18, 18, 0.8)'
     : 'rgba(255, 255, 255, 0.8)',
   backdropFilter: 'blur(10px)',
@@ -120,7 +120,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               },
             }}
           >
-            <ListItemIcon sx={{ 
+            <ListItemIcon sx={{
               color: muiTheme.palette.mode === 'dark'
                 ? 'rgba(255, 255, 255, 0.7)'
                 : 'rgba(0, 0, 0, 0.7)'
@@ -198,7 +198,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               onClick={toggleTheme}
               sx={{
                 mr: 1,
-                color: muiTheme.palette.mode === 'dark' 
+                color: muiTheme.palette.mode === 'dark'
                   ? 'rgba(255, 255, 255, 0.7)'
                   : 'rgba(0, 0, 0, 0.7)',
                 '&:hover': {
@@ -263,7 +263,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Typography
             variant="body2"
             align="center"
-            sx={{ 
+            sx={{
               color: muiTheme.palette.mode === 'dark'
                 ? 'rgba(255, 255, 255, 0.7)'
                 : 'rgba(0, 0, 0, 0.7)'

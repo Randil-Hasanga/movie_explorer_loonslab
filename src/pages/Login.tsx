@@ -168,7 +168,7 @@ const Login: React.FC = () => {
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
-                        <PersonOutlineIcon sx={{ 
+                        <PersonOutlineIcon sx={{
                           color: theme.palette.mode === 'dark'
                             ? 'rgba(255, 255, 255, 0.7)'
                             : 'rgba(0, 0, 0, 0.7)'
@@ -189,7 +189,7 @@ const Login: React.FC = () => {
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
-                        <LockOutlinedIcon sx={{ 
+                        <LockOutlinedIcon sx={{
                           color: theme.palette.mode === 'dark'
                             ? 'rgba(255, 255, 255, 0.7)'
                             : 'rgba(0, 0, 0, 0.7)'
@@ -201,7 +201,7 @@ const Login: React.FC = () => {
                         <IconButton
                           onClick={() => setShowPassword(!showPassword)}
                           edge="end"
-                          sx={{ 
+                          sx={{
                             color: theme.palette.mode === 'dark'
                               ? 'rgba(255, 255, 255, 0.7)'
                               : 'rgba(0, 0, 0, 0.7)'

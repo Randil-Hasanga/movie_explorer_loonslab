@@ -99,10 +99,10 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, initialQuery = '', isLo
           },
         }}
       >
-        <Box 
-          sx={{ 
-            display: 'flex', 
-            gap: 2, 
+        <Box
+          sx={{
+            display: 'flex',
+            gap: 2,
             flexDirection: { xs: 'column', sm: 'row' },
             position: 'relative',
           }}
@@ -221,8 +221,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, initialQuery = '', isLo
                   width: '100%',
                 }}
               >
-                <FormControl 
-                  sx={{ 
+                <FormControl
+                  sx={{
                     minWidth: { xs: '100%', sm: 120 },
                     '& .MuiOutlinedInput-root': {
                       background: isDarkMode
@@ -291,8 +291,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, initialQuery = '', isLo
                   </Select>
                 </FormControl>
 
-                <FormControl 
-                  sx={{ 
+                <FormControl
+                  sx={{
                     minWidth: { xs: '100%', sm: 120 },
                     '& .MuiOutlinedInput-root': {
                       background: isDarkMode

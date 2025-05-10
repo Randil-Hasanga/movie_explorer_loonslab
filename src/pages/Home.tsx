@@ -59,7 +59,7 @@ const Home = () => {
       setLoading(true);
       setError(null);
       setLastSearch(query);
-      
+
       const params = new URLSearchParams(query);
       const searchQuery = params.get('query') || '';
       const year = params.get('year') || '';
@@ -100,6 +100,7 @@ const Home = () => {
   return (
     <Box
       sx={{
+        borderRadius: '20px',
         minHeight: '100vh',
         background: isDarkMode
           ? 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)'
@@ -108,6 +109,7 @@ const Home = () => {
         pb: 4,
         position: 'relative',
         '&::before': {
+          borderRadius: '20px',
           content: '""',
           position: 'absolute',
           top: 0,
