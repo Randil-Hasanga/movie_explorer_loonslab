@@ -267,7 +267,6 @@ const Login: React.FC = () => {
                     fontSize: '0.9rem',
                   }}
                 >
-                  Demo credentials: username: demo, password: demo123
                 </Typography>
               </form>
             </motion.div>
