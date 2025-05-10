@@ -18,17 +18,16 @@ import {
 } from '@mui/icons-material';
 import { getMovieDetails, getImageUrl } from '../services/api';
 import { MovieDetails as MovieDetailsType } from '../types/movie';
+import { useMovieContext } from '../context/MovieContext';
 
 const MovieDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const { favorites, toggleFavorite } = useMovieContext();
   const [movie, setMovie] = useState<MovieDetailsType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [isFavorite, setIsFavorite] = useState(() => {
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-    return favorites.includes(Number(id));
-  });
+  const isFavorite = favorites.includes(Number(id));
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -46,15 +45,6 @@ const MovieDetails: React.FC = () => {
 
     fetchMovieDetails();
   }, [id]);
-
-  const handleToggleFavorite = () => {
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-    const newFavorites = isFavorite
-      ? favorites.filter((favId: number) => favId !== Number(id))
-      : [...favorites, Number(id)];
-    localStorage.setItem('favorites', JSON.stringify(newFavorites));
-    setIsFavorite(!isFavorite);
-  };
 
   if (loading) {
     return (
@@ -120,7 +110,7 @@ const MovieDetails: React.FC = () => {
               <Typography variant="h4" component="h1" gutterBottom>
                 {movie.title}
               </Typography>
-              <IconButton onClick={handleToggleFavorite} color="primary">
+              <IconButton onClick={() => toggleFavorite(Number(id))} color="primary">
                 {isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
               </IconButton>
             </Box>
