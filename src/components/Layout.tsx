@@ -156,7 +156,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               sx={{
                 flexGrow: 1,
                 textDecoration: 'none',
-                color: 'inherit',
+                color: muiTheme.palette.mode === 'dark' ? 'inherit' : 'rgba(0, 0, 0, 0.87)',
                 fontWeight: 600,
                 letterSpacing: '0.5px',
               }}
